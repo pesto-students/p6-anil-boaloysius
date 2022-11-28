@@ -1,7 +1,7 @@
 function memoize(fn) {
   const cache = new Map();
   return function (...args) {
-    const key = args.toString();
+    const key = args.sort().toString();
     if (cache.has(key)) {
       return cache.get(key);
     }
@@ -24,4 +24,5 @@ const memoizeAdd = memoize(add);
 
 time(() => console.log(memoizeAdd(38, 30, 100, 200, 5000)));
 time(() => console.log(memoizeAdd(38, 30, 100, 200, 5000)));
-time(() => console.log(memoizeAdd(38, 30, 100, 200, 5000)));
+time(() => console.log(memoizeAdd(100, 30, 38, 200, 5000)));
+time(() => console.log(memoizeAdd(5000, 30, 38, 200, 100)));

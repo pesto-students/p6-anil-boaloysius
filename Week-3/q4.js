@@ -1,5 +1,5 @@
 function createStack() {
-  let items = [];
+  const items = [];
   return {
     push(item) {
       items.push(item);
