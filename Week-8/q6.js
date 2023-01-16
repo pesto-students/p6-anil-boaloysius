@@ -29,3 +29,6 @@ var allPathsSourceTarget = function (graph) {
 
   return allPaths;
 };
+
+// Space Complexity: O(n^2+e), We store max n paths of n vertex in the path array
+// Time Complexity: O(n): We visit every node once
