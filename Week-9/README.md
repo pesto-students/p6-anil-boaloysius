@@ -1,2 +1,2 @@
 Todo Application
-![Alt text](./assets/img.png?raw=true "Title")
+![Alt text](./public/img.png?raw=true "Todo Application")
