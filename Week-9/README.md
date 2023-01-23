@@ -1,2 +1,2 @@
 Todo Application
-![Alt text](./public/img.png?raw=true "Todo Application")
+![Todo Application](public/img.png "Todo Application")
