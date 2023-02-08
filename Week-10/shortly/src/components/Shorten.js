@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import axios from "axios";
 import "../css/shorten.scss";
+import CacheContext from "../context/CacheContext";
 
-function Shorten({ addUrl, searchUrlList }) {
+function Shorten() {
   const [input, setInput] = useState("");
+  const { addToCache, searchCache } = useContext(CacheContext);
 
   const fetchData = async () => {
     const endpoint = "https://api.shrtco.de/v2/shorten?url=";
@@ -11,7 +13,7 @@ function Shorten({ addUrl, searchUrlList }) {
     const finalUrl = endpoint + stringToShorten;
     try {
       const { data } = await axios.get(finalUrl);
-      addUrl({
+      addToCache({
         id: Math.floor(Math.random() * 1000000),
         fullUrl: input,
         shortUrl: data.result.full_short_link,
@@ -22,10 +24,10 @@ function Shorten({ addUrl, searchUrlList }) {
   };
 
   const onClick = () => {
-    if (searchUrlList(input)) {
-      alert(
-        `${input} is already searched and the shortened url can be found in the list`
-      );
+    const result = searchCache(input);
+    console.log(result);
+    if (result) {
+      alert(`Found in cache:\n${result.fullUrl}: ${result.shortUrl}`);
     } else fetchData();
   };
 
