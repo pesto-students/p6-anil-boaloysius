@@ -1,3 +1,7 @@
+## Deploy url shortner app
+
+URL: https://boaloysius-url-shortner.netlify.app/
+
 ## Toggle Light
 
 Demo video: https://youtu.be/I82ZQ-F9jKk
