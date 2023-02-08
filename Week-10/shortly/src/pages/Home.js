@@ -1,8 +1,8 @@
-import Shorten from "./components/Shorten";
-import List from "./components/List";
+import Shorten from "../components/Shorten";
+import List from "../components/List";
 import { useState } from "react";
 
-function App() {
+function Home() {
   const [shortenedUrls, setShortenedUrls] = useState([]);
   function addUrl(item) {
     setShortenedUrls([item, ...shortenedUrls]);
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
