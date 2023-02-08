@@ -3,6 +3,7 @@
 ## URL shortner application
 
 Final application <a href="https://youtu.be/Ua_u8zPLXMk">demo video</a>
+Deployed Website: <a href="https://boaloysius-url-shortner.netlify.app/">https://boaloysius-url-shortner.netlify.app/</a>
 
 - In this Assignment you would be create your own working url shortener
 - The web application should have different pages like Home, Contact us.
