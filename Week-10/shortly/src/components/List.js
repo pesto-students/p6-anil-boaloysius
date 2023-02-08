@@ -1,14 +1,24 @@
+import "../css/list.scss";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+
 function List({ items }) {
-  console.log(items);
   return (
-    <ul>
-      {items.map((item) => (
-        <li key={item.id}>
-          <span>{item.fullUrl}</span>
-          <span>{item.shortUrl}</span>
-        </li>
-      ))}
-    </ul>
+    <div className="shortnedList">
+      <div className="heading">Cached URLs</div>
+      <div className="items">
+        {items.map((item) => (
+          <div className="item" key={item.id}>
+            <span>{item.fullUrl}</span>
+            <span>{item.shortUrl}</span>
+            <span>
+              <CopyToClipboard text={item.shortUrl}>
+                <button>Copy URL</button>
+              </CopyToClipboard>
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 

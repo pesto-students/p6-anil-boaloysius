@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import "../css/shorten.scss";
 
-function Shorten({ addUrl }) {
+function Shorten({ addUrl, searchUrlList }) {
   const [input, setInput] = useState("");
 
   const fetchData = async () => {
@@ -11,7 +12,7 @@ function Shorten({ addUrl }) {
     try {
       const { data } = await axios.get(finalUrl);
       addUrl({
-        id: Math.floor(Math.random() * 10),
+        id: Math.floor(Math.random() * 1000000),
         fullUrl: input,
         shortUrl: data.result.full_short_link,
       });
@@ -20,11 +21,25 @@ function Shorten({ addUrl }) {
     }
   };
 
+  const onClick = () => {
+    if (searchUrlList(input)) {
+      alert(
+        `${input} is already searched and the shortened url can be found in the list`
+      );
+    } else fetchData();
+  };
+
   return (
-    <>
-      <input value={input} onChange={(val) => setInput(val.target.value)} />
-      <button onClick={fetchData}>Shorten url</button>
-    </>
+    <div className="shorten">
+      <input
+        value={input}
+        placeholder="Please add the URL"
+        onChange={(val) => setInput(val.target.value)}
+      />
+      <button onClick={onClick} disabled={!input}>
+        Shorten url
+      </button>
+    </div>
   );
 }
 

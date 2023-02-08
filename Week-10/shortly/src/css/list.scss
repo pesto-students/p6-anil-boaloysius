@@ -1,0 +1,59 @@
+.shortnedList{
+    width: min(80%, 900px);
+    min-height: 200px;
+    background-color: #e8d4b7;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+
+
+    .heading{
+        font-size: 20px;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    
+    .items{
+        margin-top: 20px;
+        list-style-type: none;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    .item{
+        height: 30px;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .item:nth-child(even) {
+        background-color: #D6EEEE;
+    }
+    .item:nth-child(odd) {
+        background-color: #fbfbfb;
+    }
+
+    .item span:nth-child(1){
+        width: 40%;
+    }
+    .item span:nth-child(2){
+        width: 40%;
+    }
+    .item span:nth-child(3){
+        width: 20%;
+    }
+}

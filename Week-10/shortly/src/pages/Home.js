@@ -7,11 +7,14 @@ function Home() {
   function addUrl(item) {
     setShortenedUrls([item, ...shortenedUrls]);
   }
+  function searchUrlList(url) {
+    return shortenedUrls.find((item) => item.fullUrl === url);
+  }
   return (
-    <>
-      <Shorten addUrl={addUrl} />
+    <div className="home">
+      <Shorten addUrl={addUrl} searchUrlList={searchUrlList} />
       <List items={shortenedUrls} />
-    </>
+    </div>
   );
 }
 
