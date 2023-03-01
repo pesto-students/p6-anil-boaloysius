@@ -1,0 +1,127 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: grey;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+nav {
+    height: 85%;
+    width: 4%;
+    background: #f0f0f0;
+    float: left;
+}
+
+footer {
+    height: 15%;
+    background: #43689b;
+    clear: left;
+}
+
+.container{
+    height: 85%;
+    background: white;
+    float: left;
+    display: block;
+    width: 96%;
+}
+
+header {
+    height: 40%;
+    background: #454545;
+    padding: 50px;
+}
+
+.header_img{
+    height: 100%;
+    float: left;
+}
+
+.header_text {
+    float: left;
+    margin-left: 40px;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    color: white;
+}
+
+.header_text--bottom{
+    position: absolute;
+    bottom: 0px;
+}
+
+table{
+    padding: 30px;
+}
+
+td {
+    width: 25%;
+    padding: 10px;
+}
+
+nav a{
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header_text--bottom a{
+    color: white;
+}
+
+.header_text--bottom a{
+    display: inline-block;
+}
+
+nav a{
+    padding: 10px;
+}
+
+.nav_icons{
+    font-size: 30px !important;
+    color: black !important;
+}
+
+.header_text--bottom i {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.header_text--bottom a{
+    margin-right: 10px;
+}
+
+.footer_footer-left{
+    float: left;
+    padding: 10px;
+    height: 80%;
+}
+
+.song_name{
+    float: left;
+    margin-left: 20px;
+    color: white;
+}
+
+.footer_float-right{
+    float: right;
+    height: 100%;
+}
+
+.footer_float-right a{
+    margin-top: 40px;
+    margin-bottom: auto;
+    display: inline-block;
+    margin-right: 90px;
+}
+
+.footer_float-right i{
+    color: white !important;
+}
